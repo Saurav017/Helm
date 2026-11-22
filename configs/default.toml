@@ -1,0 +1,32 @@
+# Helm default configuration
+# Copy to your project root as `helmx.toml` and customize.
+
+[supervisor]
+max_steps = 25
+budget_usd = 2.00
+default_tier = "standard"
+
+[models]
+fast = "gemini-2.0-flash"
+standard = "gpt-4o"
+deep = "o3"
+
+[safety]
+hitl_mutations = true        # Require [y/N] for all mutating tools
+auto_approve_reads = true    # Skip confirmation for read-only tools
+confirmation_timeout_sec = 60  # Timeout defaults to deny
+
+[circuit_breaker]
+duplicate_detection = true
+max_step_ceiling = 25
+budget_cap_enabled = true
+
+[tool_pruning]
+enabled = true
+top_k = 5
+similarity_threshold = 0.3
+
+[logging]
+level = "INFO"
+structured = true
+file = ""  # Empty = stderr only; set a path to log to file

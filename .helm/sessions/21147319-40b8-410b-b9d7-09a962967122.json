@@ -1,0 +1,167 @@
+{
+  "session_id": "21147319-40b8-410b-b9d7-09a962967122",
+  "status": "completed",
+  "user_goal": "test",
+  "messages": [
+    {
+      "role": "user",
+      "content": "test",
+      "timestamp": "2026-11-09T03:38:45.359330Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Inspect environment & tools' completed by ResearchWorker: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+      "timestamp": "2026-11-09T03:38:45.359908Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Execute resolution action' completed by CodeWorker: Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+      "timestamp": "2026-11-09T03:38:45.360454Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Synthesize final output' completed by ResearchWorker: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+      "timestamp": "2026-11-09T03:38:45.361170Z",
+      "metadata": {}
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "step-1",
+      "description": "Analyze active tools and context relevant to goal: 'test'",
+      "status": "completed",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [],
+      "brief": null,
+      "result": {
+        "task_id": "step-1",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:38:45.359905Z"
+      },
+      "created_at": "2026-11-09T03:38:45.359822Z",
+      "step_count": 1,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-2",
+      "description": "Execute required actions or tool calls for: 'test'",
+      "status": "completed",
+      "assigned_worker": "CodeWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-1"
+      ],
+      "brief": null,
+      "result": {
+        "task_id": "step-2",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:38:45.360450Z"
+      },
+      "created_at": "2026-11-09T03:38:45.359828Z",
+      "step_count": 1,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-3",
+      "description": "Verify results and synthesize final response for: 'test'",
+      "status": "completed",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-2"
+      ],
+      "brief": null,
+      "result": {
+        "task_id": "step-3",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:38:45.361166Z"
+      },
+      "created_at": "2026-11-09T03:38:45.359832Z",
+      "step_count": 1,
+      "tool_calls": []
+    }
+  ],
+  "circuit_breaker": {
+    "seen_call_hashes": [],
+    "total_steps": 3,
+    "total_tokens": 0,
+    "total_cost_usd": 0.0,
+    "max_steps": 25,
+    "budget_usd": 2.0,
+    "duplicate_detection_enabled": true
+  },
+  "created_at": "2026-11-09T03:38:45.359326Z",
+  "updated_at": "2026-11-09T03:38:45.361517Z",
+  "final_answer": "Successfully executed task graph for goal: 'test'.\n- Inspect environment & tools: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'\n- Execute resolution action: Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'\n- Synthesize final output: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+  "metadata": {
+    "task_graph": {
+      "graph_id": "0678c46b-0b5e-42ea-a09e-1ed1bfa31017",
+      "goal": "test",
+      "steps": {
+        "step-1": {
+          "step_id": "step-1",
+          "title": "Inspect environment & tools",
+          "description": "Analyze active tools and context relevant to goal: 'test'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "completed",
+          "depends_on": [],
+          "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+          "error": null,
+          "created_at": "2026-11-09T03:38:45.359785Z",
+          "completed_at": "2026-11-09T03:38:45.359902Z"
+        },
+        "step-2": {
+          "step_id": "step-2",
+          "title": "Execute resolution action",
+          "description": "Execute required actions or tool calls for: 'test'",
+          "target_tool": null,
+          "assigned_worker": "CodeWorker",
+          "status": "completed",
+          "depends_on": [
+            "step-1"
+          ],
+          "output": "Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+          "error": null,
+          "created_at": "2026-11-09T03:38:45.359794Z",
+          "completed_at": "2026-11-09T03:38:45.360446Z"
+        },
+        "step-3": {
+          "step_id": "step-3",
+          "title": "Synthesize final output",
+          "description": "Verify results and synthesize final response for: 'test'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "completed",
+          "depends_on": [
+            "step-2"
+          ],
+          "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+          "error": null,
+          "created_at": "2026-11-09T03:38:45.359801Z",
+          "completed_at": "2026-11-09T03:38:45.361164Z"
+        }
+      },
+      "created_at": "2026-11-09T03:38:45.359777Z"
+    }
+  }
+}

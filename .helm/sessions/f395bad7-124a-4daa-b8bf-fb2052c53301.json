@@ -1,0 +1,115 @@
+{
+  "session_id": "f395bad7-124a-4daa-b8bf-fb2052c53301",
+  "status": "aborted",
+  "user_goal": "Loop test",
+  "messages": [],
+  "tasks": [
+    {
+      "task_id": "step-1",
+      "description": "Analyze active tools and context relevant to goal: 'Loop test'",
+      "status": "pending",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [],
+      "brief": null,
+      "result": null,
+      "created_at": "2026-11-09T04:20:12.866032Z",
+      "step_count": 0,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-2",
+      "description": "Execute required actions or tool calls for: 'Loop test'",
+      "status": "pending",
+      "assigned_worker": "CodeWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-1"
+      ],
+      "brief": null,
+      "result": null,
+      "created_at": "2026-11-09T04:20:12.866038Z",
+      "step_count": 0,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-3",
+      "description": "Verify results and synthesize final response for: 'Loop test'",
+      "status": "pending",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-2"
+      ],
+      "brief": null,
+      "result": null,
+      "created_at": "2026-11-09T04:20:12.866043Z",
+      "step_count": 0,
+      "tool_calls": []
+    }
+  ],
+  "circuit_breaker": {
+    "seen_call_hashes": [],
+    "total_steps": 0,
+    "total_tokens": 0,
+    "total_cost_usd": 0.0,
+    "max_steps": 0,
+    "budget_usd": 2.0,
+    "duplicate_detection_enabled": true
+  },
+  "created_at": "2026-11-09T04:20:12.865871Z",
+  "updated_at": "2026-11-09T04:20:12.866050Z",
+  "final_answer": "Execution halted: circuit breaker maximum step ceiling reached.",
+  "metadata": {
+    "task_graph": {
+      "graph_id": "5edac068-81ce-433a-9150-f0fad53dbe3d",
+      "goal": "Loop test",
+      "steps": {
+        "step-1": {
+          "step_id": "step-1",
+          "title": "Inspect environment & tools",
+          "description": "Analyze active tools and context relevant to goal: 'Loop test'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "pending",
+          "depends_on": [],
+          "output": null,
+          "error": null,
+          "created_at": "2026-11-09T04:20:12.866000Z",
+          "completed_at": null
+        },
+        "step-2": {
+          "step_id": "step-2",
+          "title": "Execute resolution action",
+          "description": "Execute required actions or tool calls for: 'Loop test'",
+          "target_tool": null,
+          "assigned_worker": "CodeWorker",
+          "status": "pending",
+          "depends_on": [
+            "step-1"
+          ],
+          "output": null,
+          "error": null,
+          "created_at": "2026-11-09T04:20:12.866008Z",
+          "completed_at": null
+        },
+        "step-3": {
+          "step_id": "step-3",
+          "title": "Synthesize final output",
+          "description": "Verify results and synthesize final response for: 'Loop test'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "pending",
+          "depends_on": [
+            "step-2"
+          ],
+          "output": null,
+          "error": null,
+          "created_at": "2026-11-09T04:20:12.866014Z",
+          "completed_at": null
+        }
+      },
+      "created_at": "2026-11-09T04:20:12.865993Z"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-config.json",
+  "_comment": "Example MCP server configurations for Helm. Copy relevant entries to your helmx.toml.",
+  "servers": [
+    {
+      "name": "filesystem",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "/path/to/project"],
+      "description": "Read/write access to the local filesystem."
+    },
+    {
+      "name": "git",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-git"],
+      "description": "Git operations: status, diff, commit, log."
+    },
+    {
+      "name": "browser",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-puppeteer"],
+      "description": "Headless browser for web scraping and screenshots."
+    },
+    {
+      "name": "database",
+      "transport": "sse",
+      "url": "http://localhost:8080/sse",
+      "description": "Database query server (PostgreSQL/SQLite) over SSE."
+    }
+  ]
+}

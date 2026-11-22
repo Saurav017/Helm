@@ -1,0 +1,167 @@
+{
+  "session_id": "c8629986-40df-4faf-892d-22ea2b6141c6",
+  "status": "completed",
+  "user_goal": "test mutation",
+  "messages": [
+    {
+      "role": "user",
+      "content": "test mutation",
+      "timestamp": "2026-11-09T03:43:10.258748Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Inspect environment & tools' completed by ResearchWorker: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+      "timestamp": "2026-11-09T03:43:10.259572Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Execute resolution action' completed by CodeWorker: Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+      "timestamp": "2026-11-09T03:43:10.260544Z",
+      "metadata": {}
+    },
+    {
+      "role": "assistant",
+      "content": "Step 'Synthesize final output' completed by ResearchWorker: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+      "timestamp": "2026-11-09T03:43:10.261262Z",
+      "metadata": {}
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "step-1",
+      "description": "Analyze active tools and context relevant to goal: 'test mutation'",
+      "status": "completed",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [],
+      "brief": null,
+      "result": {
+        "task_id": "step-1",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:43:10.259566Z"
+      },
+      "created_at": "2026-11-09T03:43:10.259309Z",
+      "step_count": 1,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-2",
+      "description": "Execute required actions or tool calls for: 'test mutation'",
+      "status": "completed",
+      "assigned_worker": "CodeWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-1"
+      ],
+      "brief": null,
+      "result": {
+        "task_id": "step-2",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:43:10.260538Z"
+      },
+      "created_at": "2026-11-09T03:43:10.259315Z",
+      "step_count": 1,
+      "tool_calls": []
+    },
+    {
+      "task_id": "step-3",
+      "description": "Verify results and synthesize final response for: 'test mutation'",
+      "status": "completed",
+      "assigned_worker": "ResearchWorker",
+      "tier": "standard",
+      "depends_on": [
+        "step-2"
+      ],
+      "brief": null,
+      "result": {
+        "task_id": "step-3",
+        "status": "completed",
+        "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+        "error": null,
+        "steps_used": 1,
+        "tokens_used": 0,
+        "cost_usd": 0.0,
+        "completed_at": "2026-11-09T03:43:10.261257Z"
+      },
+      "created_at": "2026-11-09T03:43:10.259319Z",
+      "step_count": 1,
+      "tool_calls": []
+    }
+  ],
+  "circuit_breaker": {
+    "seen_call_hashes": [],
+    "total_steps": 3,
+    "total_tokens": 0,
+    "total_cost_usd": 0.0,
+    "max_steps": 25,
+    "budget_usd": 2.0,
+    "duplicate_detection_enabled": true
+  },
+  "created_at": "2026-11-09T03:43:10.258744Z",
+  "updated_at": "2026-11-09T03:43:10.261599Z",
+  "final_answer": "Successfully executed task graph for goal: 'test mutation'.\n- Inspect environment & tools: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'\n- Execute resolution action: Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'\n- Synthesize final output: Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+  "metadata": {
+    "task_graph": {
+      "graph_id": "f9d80612-8ea5-4353-b285-7e4291894f0f",
+      "goal": "test mutation",
+      "steps": {
+        "step-1": {
+          "step_id": "step-1",
+          "title": "Inspect environment & tools",
+          "description": "Analyze active tools and context relevant to goal: 'test mutation'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "completed",
+          "depends_on": [],
+          "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+          "error": null,
+          "created_at": "2026-11-09T03:43:10.259276Z",
+          "completed_at": "2026-11-09T03:43:10.259563Z"
+        },
+        "step-2": {
+          "step_id": "step-2",
+          "title": "Execute resolution action",
+          "description": "Execute required actions or tool calls for: 'test mutation'",
+          "target_tool": null,
+          "assigned_worker": "CodeWorker",
+          "status": "completed",
+          "depends_on": [
+            "step-1"
+          ],
+          "output": "Simulated response for: 'System Instructions: You are a Code & Structured Data Specia'",
+          "error": null,
+          "created_at": "2026-11-09T03:43:10.259284Z",
+          "completed_at": "2026-11-09T03:43:10.260535Z"
+        },
+        "step-3": {
+          "step_id": "step-3",
+          "title": "Synthesize final output",
+          "description": "Verify results and synthesize final response for: 'test mutation'",
+          "target_tool": null,
+          "assigned_worker": "ResearchWorker",
+          "status": "completed",
+          "depends_on": [
+            "step-2"
+          ],
+          "output": "Simulated response for: 'System Instructions: You are a Research & Synthesis Speciali'",
+          "error": null,
+          "created_at": "2026-11-09T03:43:10.259290Z",
+          "completed_at": "2026-11-09T03:43:10.261254Z"
+        }
+      },
+      "created_at": "2026-11-09T03:43:10.259268Z"
+    }
+  }
+}

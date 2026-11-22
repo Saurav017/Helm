@@ -1,0 +1,14 @@
+[[mcp_servers]]
+name = "memory"
+transport = "stdio"
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-memory"]
+description = "Knowledge graph memory tools"
+
+
+[[mcp_servers]]
+name = "filesystem"
+transport = "stdio"
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "."]
+description = "Local project directory read/write tools"
